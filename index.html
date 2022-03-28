@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E55F6BGJCT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E55F6BGJCT');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/705361813205811250/953231047104020490/PicsArt_04-20-01.18.42.jpg">
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script> 
+        document.addEventListener('click', musicPlay);
+        function musicPlay() {
+            document.getElementById('play').play();
+            document.removeEventListener('click', musicPlay);
+        }
+
+    </script>
+    <title>GW_Rádió</title>
+ 
+</head>
+<body>
+    <h1> GW_Rádió</h1>
+    <img src="https://cdn.discordapp.com/attachments/705361813205811250/953231047104020490/PicsArt_04-20-01.18.42.jpg" id="icon" alt="icon">
+
+    <audio autoplay id="play" onloadeddata="lower()">
+        <source src="19.mp3" type="audio/mpeg">
+    </audio>
+
+    <p id="mostszol">🟢Most szól: <span id="aktualis"> Műsorszünet </span></p>
+
+    <input type="range" min="1" max="25" value="12.5" class="slider" id="myRange" onchange="setVol()" onclick="setVol()">
+    
+    <table id="lenti">
+        <tr>  
+            <td>
+                <img src="" id="pic1">
+            </td>
+            <td>
+                <img src="" id="pic2">
+            </td>
+        </tr>  
+    </table>
+
+    <script src="script.js"> </script>
+    <script src="GWMusiks.js"></script>
+</body>
+</html>
+
